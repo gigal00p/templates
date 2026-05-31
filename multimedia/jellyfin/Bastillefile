@@ -1,6 +1,7 @@
 CMD mkdir -p /usr/local/etc/pkg/repos
-CMD echo 'FreeBSD-ports: { url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest", mirror_type: "srv", mirror_type: "srv", fingerprints: "/usr/share/keys/pkg", enabled: yes}' > /usr/local/etc/pkg/repos/FreeBSD.conf
+CMD echo 'FreeBSD-ports: { url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest" }' > /usr/local/etc/pkg/repos/FreeBSD.conf
 CONFIG set allow.mlock 1
+RESTART
 CONFIG set ip6 inherit
 RESTART
 PKG jellyfin
